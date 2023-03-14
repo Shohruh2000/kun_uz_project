@@ -16,7 +16,7 @@ class Region(models.Model):
         return self.name
 
 class News(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=150)
     slug = models.SlugField(max_length=100,unique=True)
     content = models.TextField()
     img = models.ImageField(upload_to = 'uploads/% Y/% m/% d/')
